@@ -15,10 +15,15 @@ body{
 .navLogo{
     display: inline-block;
 }
+#logo{
+    width: 200px;
+}
+#menu-icon{
+    display: none;
+}
 .navLogo img{
     margin-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 15px;
 }
 .navMenu{
     margin-right: 50px;
@@ -41,6 +46,20 @@ body{
 }
 #loginBtn:hover{
     color: #e2f2e4;
+}
+@media only screen and (max-device-width : 1005px) {
+    #body{
+        width: 100%;
+    }
+    #menu-icon{
+        display: inline-block;
+        float: right;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+    #navMenu{
+        display: none ;
+    }
 }
 /* ---------------------body--------------------- */
 
@@ -119,15 +138,26 @@ body{
     color: #e2f2e4;
     margin: 0px;
 }
-@media(min-width:400px){
-/* .footerContact, .footerNavMenu,.footerLinks{
-    display: block;
-    width: 100%;
-} */
-footer{
-    display: none;
+@media only screen and (max-device-width : 1005px) {
+    
+    #footerContact, #footerNavMenu,#footerLinks{
+        display: none;
+        height: 180px;
+        margin: 30px 12px 12px 12px;
+        font-size: 14px;
+    }
+    #footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    #footerlogo{
+        width: 150px;
+    }
 }
-}
+
 .footerMenu{
     display: flex;
     justify-content: center;
