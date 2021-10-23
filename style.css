@@ -138,24 +138,40 @@ body{
     color: #e2f2e4;
     margin: 0px;
 }
-@media only screen and (max-device-width : 1005px) {
-    
-    #footerContact, #footerNavMenu,#footerLinks{
-        display: none;
-        height: 180px;
-        margin: 30px 12px 12px 12px;
-        font-size: 14px;
-    }
-    #footer{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        
+@media only screen and (max-device-width : 700px) {
+    #get-in-touch{
+        font-size: 20px;
+        text-align: center;
     }
     #footerlogo{
-        width: 150px;
+        width: 100px;
     }
+    #footerMenu{
+        display: block;
+        font-size: 12px;
+        
+    }
+    #footer{
+        height: 300px;
+    }
+    #map-icon, #mail-icon, #phone-icon{
+        width: 10px;
+        height: 10px;
+    }
+    #footerContact,#footerLinks{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100px;
+        margin: 0;
+    }
+    #footerNavMenu{
+        display: none;
+    }
+
+    
 }
 
 .footerMenu{
@@ -192,9 +208,6 @@ body{
 .footer span, .footer h1{
     color: #48b5d6;
 }
-/* #copyright{
-    margin-top: 20px;
-} */
 #facebook:hover{
     color: #4267B2;
 }
@@ -218,7 +231,6 @@ body{
     color: #e2f2e4;
 }
 .footerContact{
-    justify-content: center;
     align-items: baseline;
 }
 
