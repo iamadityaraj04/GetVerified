@@ -7,6 +7,8 @@
     <title>Get Verified | Homepage</title>
     <link rel="shortcut icon" href="images/logo.svg">
     <link rel="stylesheet" href="style.css">
+    
+
 </head>
 <body>
     <div class="container">
@@ -25,7 +27,20 @@
             </div>
         </div>
         <div class="subContainer1">
+            <img src="images/homepage-image2.jpg" id="slide" width="100%" height="700px">
+            
 
+        
+            <a class="previous-slide" onclick="slider()">&#10094;</a>
+            <a class="next-slide" onclick="slider()">&#10095;</a>
+
+            <div style="text-align:center" id="carousel-indicators">
+                <span class="carousel-indicators" onclick=""></span> 
+                <span class="carousel-indicators" onclick=""></span> 
+            </div>
+        </div>
+        <div class="subContainer2">
+            
         </div>
         <div class="footer">
             <h1>GET IN TOUCH</h1>
@@ -38,11 +53,11 @@
                     </div>
                     <div class="mail">
                         <div id="mapIcon"><img src="images/mail.svg" alt="" width="20px"></div>
-                        <span><p><a href="mailto:getverified@yahoo.in" >getverified@yahoo.in</a> </p></span>
+                        <span><p><a href="mailto:getverified@yahoo.in" target="_blank" >getverified@yahoo.in</a> </p></span>
                     </div>
                     <div class="address">
                         <div id="mapIcon"><img src="images/map.svg" alt="" width="20px"></div>
-                        <span><p><a href="https://maps.google.com/?q=Mumbai, India">Mumbai, India</a></p></span>
+                        <span><p><a href="https://maps.google.com/?q=Mumbai, India" target="_blank">Mumbai, India</a></p></span>
                     </div>
                 </div>
                 <div class="footerNavMenu">
@@ -65,7 +80,25 @@
     </div>
     
     <script>
+        // -----------homepage----------
+        var images= Array();
+        images[0]="images/homepage-image2.jpg";
+        images[1]="images/homepage-image1.jpg";
+        
 
+        var i=0;
+
+        function slider() {
+            
+            if(i<images.length){
+                document.getElementById("slide").src=images[i];
+                i++;
+            }
+            else{
+                i=0;
+    
+            }
+        }
     </script>
 </body>
 </html>
