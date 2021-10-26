@@ -12,12 +12,14 @@
 </head>
 <body>
     <div class="container">
-        <div class="navbar" id="navbar">
+        <nav class="navbar" id="navbar">
             <div class="navLogo">
                 <img src="images/logo.svg" alt="error" id="headerlogo" width="200px">
-            </div>
-            <div id="menu-icon">
-                <img src="images/menu-icon.svg" alt="" width="30px">
+                <div id="menu-toggle" onclick="menutoggle()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
             <div class="navMenu" id="navMenu">
                 <ul>
@@ -27,8 +29,9 @@
                     <li><a href="">CONTACT</a></li>
                     <li><a href="" id="loginBtn">LOGIN</a></li>
                 </ul>
+
             </div>
-        </div>
+        </nav>
         <div class="subContainer1">
             <img src="images/homepage-image2.jpg" id="slide" width="100%" height="700px">
             
@@ -84,7 +87,19 @@
     </div>
     
     <script>
+        var a=0;
+        function menutoggle() {
+            if(a==0){
+                document.getElementById("navMenu").style.display="inline";
+                a++;
+            }
+            else{
+                document.getElementById("navMenu").style.display="none";
+                a--;
+            }
+        }
         // -----------homepage----------
+
         var images= Array();
         images[0]="images/homepage-image2.jpg";
         images[1]="images/homepage-image1.jpg";
@@ -103,6 +118,7 @@
     
             }
         }
+
     </script>
 </body>
 </html>
