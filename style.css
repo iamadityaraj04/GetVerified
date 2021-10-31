@@ -154,11 +154,121 @@ body{
     top: 20;
     left: 50%;
 }
-.subContainer2{
+
+
+/* --------------------subContainer2----------------- */
+
+#subContainer2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 700px;
-    border: 2px solid black;
+    height: 800px;
     margin: 50px 0;
+    background-color: #e2f2e4;
+}
+#verify-certificate{
+    height: 600px;
+    width: 1150px;
+    background-color: white;
+    border-radius: 35px;
+    box-shadow: 3px 5px 5px 2px #888888;
+}
+#verify-certificate-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 43%;
+    height: 100%;
+}
+#verify-certificate-1 img{
+    width:350px;
+    height:270px;
+}
+#verify-certificate-2{
+    display: flex;
+    align-items: center;
+    float: right;
+    height: 100%;
+    width: 55%;
+}
+#verify-certificate-bg{
+    width: 560px;
+	height: 470px;
+    background-image: url(images/Path\ 9.svg);
+}
+
+#verify-certificate-title{
+    color: #e2f2e4;
+    font-size: 34px;
+}
+#verify-certificate-form{
+    float: right;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 110px;
+}
+#verify-certificate-form div{
+    padding: 15px;
+}
+#verify-certificate-txtfield{
+    width: 350px;
+    height: 40px;
+    border: none;
+    border-radius: 50px;
+}
+#verify-certificate-btn{
+    background-color: #292d4f;
+    border: none;
+    width: 180px;
+    height: 45px;
+    border-radius: 50px;
+    color: #e2f2e4;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 0px #000000;
+}
+
+@media only screen and (max-device-width : 1024px){
+    #subContainer2{
+        height: 500px;
+    }
+    #verify-certificate{
+        height: 400px;
+        width: 800px;
+        border-radius: 25px;
+    }
+    #verify-certificate-1 img{
+        width:250px;
+        height:170px;
+    }
+    #verify-certificate-bg{
+        width: 385px;
+        height: 280px;
+    }
+    
+    #verify-certificate-title{
+        font-size: 20px;
+    }
+    #verify-certificate-form{
+        margin-top: 60px;
+    }
+    #verify-certificate-form div{
+        padding: 7px;
+    }
+    #verify-certificate-txtfield{
+        width: 250px;
+        height: 30px;
+        border-radius: 20px;
+    }
+    #verify-certificate-btn{
+        width: 120px;
+        height: 35px;
+    }
+
 }
 /* --------------------footer-------------------- */
 
@@ -273,4 +383,3 @@ body{
 .footerContact{
     align-items: baseline;
 }
-
