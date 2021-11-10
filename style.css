@@ -3,7 +3,7 @@ body{
     padding: 0px;
 }
 .container{
-    
+    font-family: Arial, Helvetica, sans-serif;
 }
 /* -------------------Header-------------------- */
 
@@ -219,7 +219,10 @@ body{
     width: 350px;
     height: 40px;
     border: none;
-    border-radius: 50px;
+    border-radius: 15px;
+}
+#verify-certificate-txtfield ::placeholder{
+    margin-left: 50px;
 }
 #verify-certificate-btn{
     background-color: #292d4f;
@@ -268,6 +271,80 @@ body{
         width: 120px;
         height: 35px;
     }
+}
+/* ----------------subcontainer3----------------- */
+#subContainer3{
+    height: 600px;
+}
+#subContainer3 p{
+    text-align: center;
+    font-size: 60px;
+    color: #046c95;
+    margin: 25px 0px;
+}
+#how-it-works-steps{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;   
+}
+.steps{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 450px;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px -2px #046c95;
+}
+.steps h5{
+    color: #046c95;
+    font-size: 20px;
+}
+.steps h1{
+    color: #b3e0ee;
+    font-size: 60px;
+    
+}
+.steps img{
+    width: 250px;
+}
+@media only screen and (max-device-width : 800px){
+    #subContainer3{
+        height: 900px;
+    }
+    #subContainer3 p{
+        font-size: 40px;
+        margin: 15px 0px;
+    }
+    .steps{
+        width: 80%;
+        height: 250px;
+        border-radius: 15px;
+        margin: 10px 0px;
+    }
+    #how-it-works-steps{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+    .steps h5{
+       font-size: 10px;
+       padding: 0px 30px;
+    }
+    .steps h1{
+       font-size: 40px;
+    }
+    .steps img{
+        width: 150px;
+    }
+
+}
+@media only screen and (max-device-width : 1024px){
+    .steps img{
+        width: 200px;
+    }
 
 }
 /* --------------------footer-------------------- */
@@ -276,6 +353,7 @@ body{
     width: 100%;
     background-color: #292d4f;
     height: 350px;
+    margin-top: 35px;
 }
 .footer h1,p{
     font-family: Arial, Helvetica, sans-serif;
