@@ -5,9 +5,13 @@ body{
 .container{
     font-family: Arial, Helvetica, sans-serif;
 }
-/* -------------------Header-------------------- */
-
+html{
+    scroll-behavior: smooth;
+    
+}
+/* ---------------Header-------------------- */ 
 .navbar{
+    overflow: hidden;
     width: 100%;
     height: 60px;
     background-color: #292d4f;
@@ -31,6 +35,11 @@ body{
     margin-top: 5px;
     margin-bottom: 5px;
 }
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 .navMenu li{
     display: inline;
 }
@@ -39,6 +48,7 @@ body{
     text-decoration: none;
     padding: 0px 30px;
     font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
 }
 #loginBtn{
     color: #48b5d6;
@@ -166,6 +176,7 @@ body{
     height: 800px;
     margin: 50px 0;
     background-color: #e2f2e4;
+    scroll-margin-top: 60px;
 }
 #verify-certificate{
     height: 600px;
@@ -234,51 +245,55 @@ body{
     cursor: pointer;
     box-shadow: 2px 2px 2px 0px #000000;
 }
+#verify-certificate-btn:hover{
+    background-color: #48b5d6;
+}
 
 @media only screen and (max-device-width : 1024px){
     #subContainer2{
-        height: 500px;
+        height: 400px;
     }
     #verify-certificate{
-        height: 400px;
-        width: 800px;
+        height: 300px;
+        width: 560px;
         border-radius: 25px;
     }
     #verify-certificate-1 img{
-        width:250px;
-        height:170px;
+        width:150px;
+        height:120px;
     }
     #verify-certificate-bg{
-        width: 385px;
-        height: 280px;
+        width: 285px;
+        height: 180px;
     }
     
     #verify-certificate-title{
-        font-size: 20px;
+        font-size: 15px;
     }
     #verify-certificate-form{
-        margin-top: 60px;
+        margin-top: 20px;
     }
     #verify-certificate-form div{
         padding: 7px;
     }
     #verify-certificate-txtfield{
-        width: 250px;
-        height: 30px;
-        border-radius: 20px;
+        width: 200px;
+        height: 25px;
+        border-radius: 8px;
     }
     #verify-certificate-btn{
-        width: 120px;
-        height: 35px;
+        width: 80px;
+        height: 25px;
     }
 }
 /* ----------------subcontainer3----------------- */
 #subContainer3{
     height: 600px;
+    scroll-margin-top: 60px;
 }
-#subContainer3 p{
+.subContainer-heading p{
     text-align: center;
-    font-size: 60px;
+    font-size: 50px;
     color: #046c95;
     margin: 25px 0px;
 }
@@ -314,8 +329,8 @@ body{
     #subContainer3{
         height: 900px;
     }
-    #subContainer3 p{
-        font-size: 40px;
+    .subContainer-heading p{
+        font-size: 30px;
         margin: 15px 0px;
     }
     .steps{
@@ -330,22 +345,81 @@ body{
         align-items: center;
     }
     .steps h5{
-       font-size: 10px;
-       padding: 0px 30px;
+        font-size: 10px;
+        padding: 0px 30px;
     }
     .steps h1{
-       font-size: 40px;
+        font-size: 40px;
     }
     .steps img{
         width: 150px;
     }
-
+    
 }
 @media only screen and (max-device-width : 1024px){
     .steps img{
         width: 200px;
     }
-
+    
+}
+/* -----------subcontainer 4 ----------- */
+#subContainer4{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    scroll-margin-top: 50px;
+}
+#contact-us{
+    width: 95%;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+}
+#contact-us-msg{
+    width: 50%;
+    background-color: #e2f2e4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-us-form-textfield{
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color:#e2f2e4 ;
+    
+}
+#contact-us-msg-form{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#contact-us-msg-form p{
+    color: #046c95;
+    font-size: 25px;
+}
+#contact-us-img{
+    width: 50%;
+}
+#contact-us-img img{
+    opacity: 0.5;
+}
+#contact-us-btn{
+    background-color: #292d4f;
+    border: none;
+    width: 120px;
+    height: 30px;
+    border-radius: 50px;
+    color: #e2f2e4;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 0px #000000;
+}
+#contact-us-btn:hover{
+ background-color:#48b5d6 ;
 }
 /* --------------------footer-------------------- */
 
