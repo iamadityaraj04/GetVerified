@@ -11,7 +11,21 @@
 
 </head>
 <body>
-    <div class="container">
+    <div id="certificate-display">
+        <a id="cross" onclick="returnHomepage()"><img src="images/cross.svg" alt="" width="20px"></a>
+        <div id="certificate-display-1">
+            <div id="demo-certificte-img">
+                <img src="images/demo-certificate.svg" alt="" width="800px">
+            </div>
+            <div id="demo-certificte-details">
+                <p>Name:</p>    
+                <p>Certificate Number:</p>    
+                <p>Date Of Issue:</p>    
+                <button id="download-certificate-btn">Download Certificate</button>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="container">
         <nav class="navbar" id="navbar">
             <div class="navLogo">
                 <img src="images/logo.svg" alt="error" id="headerlogo" width="200px">
@@ -23,7 +37,7 @@
             </div>
             <div class="navMenu" id="navMenu">
                 <ul>
-                    <li><a href="">HOME</a></li>
+                    <li><a href="#subContainer1">HOME</a></li>
                     <li><a href="#subContainer2">VERIFY CERTIFICATE</a></li>
                     <li><a href="#subContainer3">ABOUT</a></li>
                     <li><a href="#subContainer4">CONTACT</a></li>
@@ -58,10 +72,10 @@
                                 <p id="verify-certificate-title">Verify Your Certificate</p>
                             </div>
                             <div>
-                                <input type="text" id="verify-certificate-txtfield" placeholder="Enter Certificate Number">
+                                <input type="number" id="verify-certificate-txtfield" placeholder="Enter Certificate Number">
                             </div>
                             <div>
-                                <button id="verify-certificate-btn">Verify It</button>
+                                <button id="verify-certificate-btn" onclick="certificateDisplay()">Verify It</button>
                             </div>    
                         </div>
                     </div>
@@ -149,10 +163,10 @@
                     </div>
                 </div>
                 <div class="footerNavMenu" id="footerNavMenu">
-                    <a href="">HOME</a>
-                    <a href="">ABOUT</a>
-                    <a href="">VERIFY CERTIFICATE</a>
-                    <a href="">CONTACT</a>
+                    <a href="#subContainer1">HOME</a>
+                    <a href="#subContainer2">VERIFY CERTIFICATE</a>
+                    <a href="#subContainer3">ABOUT</a>
+                    <a href="#subContainer4">CONTACT</a>
                     <a href="">HELP</a>
                 </div>
                 <div class="footerLinks" id="footerLinks">
@@ -199,19 +213,19 @@
     
             }
         }
-
-        window.onscroll = function() {myFunction()};
-
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-
-        function myFunction() {
-        if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-        } else {
-            navbar.classList.remove("sticky");
+        function certificateDisplay() {
+            if(document.getElementById("verify-certificate-txtfield").value==0){
+                alert("Enter Certificate Number!")
+            }else{
+                document.getElementById("certificate-display").style.display="block";
+                document.getElementById("container").style.display="none";
+            }
         }
-
+        function returnHomepage() {
+            document.getElementById("certificate-display").style.display="none";
+            document.getElementById("container").style.display="block";
+            
+        }
          
     </script>
 </body>
