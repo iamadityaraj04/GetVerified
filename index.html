@@ -7,8 +7,8 @@
     <title>Get Verified | Homepage</title>
     <link rel="shortcut icon" href="images/logo1.svg">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     
-
 </head>
 <body>
     <div id="certificate-display">
@@ -19,6 +19,7 @@
             </div>
             <div id="demo-certificte-details">
                 <p>Name:</p>    
+                <p>Degree:</p>    
                 <p>Certificate Number:</p>    
                 <p>Date Of Issue:</p>    
                 <button id="download-certificate-btn">Download Certificate</button>
@@ -41,24 +42,23 @@
                     <li><a href="#subContainer2">VERIFY CERTIFICATE</a></li>
                     <li><a href="#subContainer3">ABOUT</a></li>
                     <li><a href="#subContainer4">CONTACT</a></li>
-                    <li><a href="" id="loginBtn">LOGIN</a></li>
+                    <li><a href="login.html" id="loginBtn">LOGIN</a></li>
                 </ul>
 
             </div>
         </nav>
-        <!-- <div class="subContainer1">
-            <img src="images/homepage-image2.jpg" id="slide" width="100%" height="700px">
-            
+        <!-- subcontainer 1 -->
+        <div id="subContainer1">
+            <div id="background-img">
 
-        
-            <a class="previous-slide" onclick="slider()">&#10094;</a>
-            <a class="next-slide" onclick="slider()">&#10095;</a>
-
-            <div style="text-align:center" id="carousel-indicators">
-                <span class="carousel-indicators" onclick=""></span> 
-                <span class="carousel-indicators" onclick=""></span> 
             </div>
-        </div> -->
+            <div class="homepage-text">
+                Hello! <span class="wave">👋</span>
+                <div>
+                    Don’t trust, <span class="typing"></span>    
+                </div>
+            </div>
+        </div>
         <!-- subcontainer 2 -->
         <div id="subContainer2">
             <div id="verify-certificate">
@@ -182,6 +182,13 @@
     </div>
     
     <script>
+        var typing = new Typed (".typing" ,{
+        strings : ["just verify.", "check it now."],
+        typeSpeed: 100,
+        backSpeed:60,
+        loop:true
+    }); 
+
         var a=0;
         function menutoggle() {
             if(a==0){
@@ -193,35 +200,21 @@
                 a--;
             }
         }
-        // -----------homepage----------
 
-        var images= Array();
-        images[0]="images/homepage-image2.jpg";
-        images[1]="images/homepage-image1.jpg";
         
-
-        var i=0;
-
-        function slider() {
-            
-            if(i<images.length){
-                document.getElementById("slide").src=images[i];
-                i++;
-            }
-            else{
-                i=0;
-    
-            }
-        }
         function certificateDisplay() {
             if(document.getElementById("verify-certificate-txtfield").value==0){
                 alert("Enter Certificate Number!")
             }else{
-                document.getElementById("certificate-display").style.display="block";
-                document.getElementById("container").style.display="none";
+                document.getElementById("container").style.opacity="0.1";      
+                setTimeout(() => {  
+                    document.getElementById("certificate-display").style.display="block";
+                    document.getElementById("container").style.display="none";
+                }, 1000);
             }
         }
         function returnHomepage() {
+            document.getElementById("container").style.opacity="1";   
             document.getElementById("certificate-display").style.display="none";
             document.getElementById("container").style.display="block";
             
