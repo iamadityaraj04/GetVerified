@@ -182,6 +182,18 @@
     </div>
     
     <script>
+        var a=0;
+        function menutoggle() {
+            if(a==0){
+                document.getElementById("navMenu").style.display="inline";
+                a++;
+            }
+            else{
+                document.getElementById("navMenu").style.display="none";
+                a--;
+            }
+        }
+        
         var typing = new Typed (".typing" ,{
         strings : ["just verify.", "check it now."],
         typeSpeed: 100,
